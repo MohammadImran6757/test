@@ -27,8 +27,10 @@
         .toggle-btn {
             cursor: pointer;
         }
+
         .kebab-drops.show {
-            display: block; /* Show the dropdown when the 'show' class is applied */
+            display: block;
+            /* Show the dropdown when the 'show' class is applied */
         }
     </style>
 </head>
@@ -372,7 +374,7 @@
             toggleBtn.addEventListener('click', function(event) {
                 event.preventDefault(); // Prevent default anchor behavior
                 var kebabMenu = this.parentElement.querySelector('.kebab-drops');
-                
+
                 // Close all other open kebab menus
                 var allKebabMenus = document.querySelectorAll('.kebab-drops.show');
                 allKebabMenus.forEach(function(menu) {

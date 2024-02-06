@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-          @media (max-width: 600px) {
+        @media (max-width: 600px) {
             .logout ul {
                 position: relative;
                 display: inline-block;
@@ -26,22 +27,31 @@
                 display: block;
             }
         }
+
         .dropdown-content {
-            display: none; /* Hide the dropdown content by default */
+            display: none;
+            /* Hide the dropdown content by default */
         }
+
         .dropdown-content.show {
-            display: block; /* Show the dropdown content when the 'show' class is applied */
+            display: block;
+            /* Show the dropdown content when the 'show' class is applied */
         }
+
         .option-color {
-            display: none; /* Hide the logout options by default */
+            display: none;
+            /* Hide the logout options by default */
         }
+
         .option-color.show {
-            display: block; /* Show the logout options when the 'show' class is applied */
+            display: block;
+            /* Show the logout options when the 'show' class is applied */
         }
     </style>
 </head>
+
 <body>
-   
+
     <div class="header">
         <div class="logo left">
             <img src="img/forgot.png" alt="">
@@ -58,17 +68,17 @@
                 <li>
                     <a href="#"><img src="img/logout.svg" alt=""></a>
                     <ul class="option-color">
-                      <li><a href="#">Change Password</a></li>
-                      <li><a href="#">Logout</a></li>
+                        <li><a href="#">Change Password</a></li>
+                        <li><a href="#">Logout</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
     </div>
 
-  
-   
-        <!-- <script>
+
+
+    <!-- <script>
             // Function to toggle the dropdown menu on click
             function toggleDropdown() {
                 var dropdownContent = document.querySelector('.logout ul ul');
@@ -79,7 +89,7 @@
             document.querySelector('.logout ul li a').addEventListener('click', toggleDropdown);
           
         </script> -->
-        <!-- <script>
+    <!-- <script>
             document.addEventListener('DOMContentLoaded', function () {
         // Get the element with the class "logout"
         var logoutElement = document.querySelector('.logout ul ul');
@@ -91,54 +101,55 @@
         });
     });
         </script> -->
-        <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var dropBtns = document.querySelectorAll('.drop-btn');
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var dropBtns = document.querySelectorAll('.drop-btn');
 
-        dropBtns.forEach(function(dropBtn) {
-            dropBtn.addEventListener('click', function(event) {
-                event.preventDefault(); // Prevent default anchor behavior
-                var dropdownContent = this.nextElementSibling;
-                dropdownContent.classList.toggle('show');
+            dropBtns.forEach(function(dropBtn) {
+                dropBtn.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent default anchor behavior
+                    var dropdownContent = this.nextElementSibling;
+                    dropdownContent.classList.toggle('show');
+                });
+            });
+
+            // Close dropdown when clicking outside of it
+            window.addEventListener('click', function(event) {
+                if (!event.target.closest('.dropdown-div')) {
+                    var dropdownContents = document.querySelectorAll('.dropdown-content');
+                    dropdownContents.forEach(function(dropdownContent) {
+                        dropdownContent.classList.remove('show');
+                    });
+                }
             });
         });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var logoutButton = document.querySelector('.logout');
+            var logoutOptions = document.querySelector('.option-color');
 
-        // Close dropdown when clicking outside of it
-        window.addEventListener('click', function(event) {
-            if (!event.target.closest('.dropdown-div')) {
-                var dropdownContents = document.querySelectorAll('.dropdown-content');
-                dropdownContents.forEach(function(dropdownContent) {
-                    dropdownContent.classList.remove('show');
-                });
-            }
-        });
-    });
-</script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var logoutButton = document.querySelector('.logout');
-        var logoutOptions = document.querySelector('.option-color');
+            // Toggle visibility of logout options when the logout button is clicked
+            logoutButton.addEventListener('click', function(event) {
+                event.stopPropagation(); // Prevent the event from bubbling up to the document click event
+                logoutOptions.classList.toggle('show');
+            });
 
-        // Toggle visibility of logout options when the logout button is clicked
-        logoutButton.addEventListener('click', function(event) {
-            event.stopPropagation(); // Prevent the event from bubbling up to the document click event
-            logoutOptions.classList.toggle('show');
-        });
+            // Close logout options when clicking outside of them
+            document.addEventListener('click', function(event) {
+                var target = event.target;
+                if (!target.closest('.logout')) {
+                    logoutOptions.classList.remove('show');
+                }
+            });
 
-        // Close logout options when clicking outside of them
-        document.addEventListener('click', function(event) {
-            var target = event.target;
-            if (!target.closest('.logout')) {
-                logoutOptions.classList.remove('show');
-            }
+            // Prevent closing logout options when clicking on them
+            logoutOptions.addEventListener('click', function(event) {
+                event.stopPropagation(); // Prevent the event from bubbling up to the document click event
+            });
         });
+    </script>
 
-        // Prevent closing logout options when clicking on them
-        logoutOptions.addEventListener('click', function(event) {
-            event.stopPropagation(); // Prevent the event from bubbling up to the document click event
-        });
-    });
-</script>
-   
 </body>
+
 </html>
