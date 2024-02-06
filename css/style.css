@@ -1210,6 +1210,14 @@ width: 11%;
         flex-direction: column;
         width: 91%;
       }
+      .kebab-drops a:nth-child(even){
+        background-color: #fff;
+        color:teal;
+      }
+      .logout ul li ul li:nth-child(odd){
+        background-color: #555;
+        color: #fff;
+      }
  }
  @media only screen and (min-device-width: 800px) and (max-device-width: 1250px) and (orientation:portrait) {
 
