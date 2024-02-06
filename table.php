@@ -27,11 +27,14 @@
         .toggle-btn {
             cursor: pointer;
         }
+        .kebab-drops.show {
+            display: block; /* Show the dropdown when the 'show' class is applied */
+        }
     </style>
 </head>
 
 <body>
-<div id="popup"></div>
+    <div id="popup"></div>
     <?php include "includes/header.php"; ?>
     <?php include "includes/sidebar.php"; ?>
 
@@ -46,20 +49,20 @@
                     <div class="clr"></div>
                 </div>
                 <div class="right" style="display:flex">
-                    <div class="title-btn"><a href="#">Approve</a></div>
+                    <!-- <div class="title-btn"><a href="#">Approve</a></div> -->
                     <div class="title-btn"><a href="#">Approve</a></div>
                 </div>
 
             </div>
-            
+
             <div class="right search-filter">
                 <div class="tbl-data right" title="Show Columns">
                     <a style="cursor:pointer;" id="columnFilter">
                         <img src="img/table.svg" height="22px">
                     </a>
                     <!-- <div id="checkboxes"
-                           style="min-width:200px; margin-top: -2px; min-height: 100px; max-height: 300px; overflow: auto; position: absolute; background: #fff; z-index: 1; right: 15px;">
-                          <div style="height: 20px; padding: 10px; font-weight: 600;">
+                           style="min-width:200px; margin-top: -2px; min-height: 100px; max-height: 300px; overflow: auto; position: absolute; background: #fff; z-index: 11; right: 15px;">
+                          <div style="height: 20px; padding: 10px; font-size:14px;font-weight: 600;">
                               Displayed Columns
                           </div>
                           <div id="columnFilterData"></div>
@@ -130,7 +133,7 @@
                         <div class="row-cells">mukesh@gamil.com</div>
                         <div class="row-cells">Ambedkar Nagar New Delhi</div>
                         <div class="row-cells" style="width:1%">
-                        <div class="kebab-act posrel">
+                            <div class="kebab-act posrel">
                                 <a href="#" class="toggle-btn"><img src="img/kebabmenu.svg" alt=""></a>
                                 <div class="kebab-drops posabs">
                                     <a href="#">Edit</a>
@@ -149,7 +152,7 @@
                         <div class="row-cells">Ambedkar Nagar New Delhi</div>
                         <div class="row-cells" style="width:1%">
                             <div class="kebab-act posrel">
-                                <a href="#"><img src="img/kebabmenu.svg" alt=""></a>
+                                <a href="#" class="toggle-btn"><img src="img/kebabmenu.svg" alt=""></a>
                                 <div class="kebab-drops posabs">
                                     <a href="#">Edit</a>
                                     <a href="#">Approve</a>
@@ -167,7 +170,7 @@
                         <div class="row-cells">Ambedkar Nagar New Delhi</div>
                         <div class="row-cells" style="width:1%">
                             <div class="kebab-act posrel">
-                                <a href="#"><img src="img/kebabmenu.svg" alt=""></a>
+                                <a href="#" class="toggle-btn"><img src="img/kebabmenu.svg" alt=""></a>
                                 <div class="kebab-drops posabs">
                                     <a href="#">Edit</a>
                                     <a href="#">Approve</a>
@@ -185,7 +188,7 @@
                         <div class="row-cells">Ambedkar Nagar New Delhi</div>
                         <div class="row-cells" style="width:1%">
                             <div class="kebab-act posrel">
-                                <a href="#"><img src="img/kebabmenu.svg" alt=""></a>
+                                <a href="#" class="toggle-btn"><img src="img/kebabmenu.svg" alt=""></a>
                                 <div class="kebab-drops posabs">
                                     <a href="#">Edit</a>
                                     <a href="#">Approve</a>
@@ -203,7 +206,7 @@
                         <div class="row-cells">Ambedkar Nagar New Delhi</div>
                         <div class="row-cells" style="width:1%">
                             <div class="kebab-act posrel">
-                                <a href="#"><img src="img/kebabmenu.svg" alt=""></a>
+                                <a href="#" class="toggle-btn"><img src="img/kebabmenu.svg" alt=""></a>
                                 <div class="kebab-drops posabs">
                                     <a href="#">Edit</a>
                                     <a href="#">Approve</a>
@@ -221,7 +224,7 @@
                         <div class="row-cells">Ambedkar Nagar New Delhi</div>
                         <div class="row-cells" style="width:1%">
                             <div class="kebab-act posrel">
-                                <a href="#"><img src="img/kebabmenu.svg" alt=""></a>
+                                <a href="#" class="toggle-btn"><img src="img/kebabmenu.svg" alt=""></a>
                                 <div class="kebab-drops posabs">
                                     <a href="#">Edit</a>
                                     <a href="#">Approve</a>
@@ -239,7 +242,7 @@
                         <div class="row-cells">Ambedkar Nagar New Delhi</div>
                         <div class="row-cells" style="width:1%">
                             <div class="kebab-act posrel">
-                                <a href="#"><img src="img/kebabmenu.svg" alt=""></a>
+                                <a href="#" class="toggle-btn"><img src="img/kebabmenu.svg" alt=""></a>
                                 <div class="kebab-drops posabs">
                                     <a href="#">Edit</a>
                                     <a href="#">Approve</a>
@@ -257,7 +260,7 @@
                         <div class="row-cells">Ambedkar Nagar New Delhi</div>
                         <div class="row-cells" style="width:1%">
                             <div class="kebab-act posrel">
-                                <a href="#"><img src="img/kebabmenu.svg" alt=""></a>
+                                <a href="#" class="toggle-btn"><img src="img/kebabmenu.svg" alt=""></a>
                                 <div class="kebab-drops posabs">
                                     <a href="#">Edit</a>
                                     <a href="#">Approve</a>
@@ -275,7 +278,7 @@
                         <div class="row-cells">Ambedkar Nagar New Delhi</div>
                         <div class="row-cells" style="width:1%">
                             <div class="kebab-act posrel">
-                                <a href="#"><img src="img/kebabmenu.svg" alt=""></a>
+                                <a href="#" class="toggle-btn"><img src="img/kebabmenu.svg" alt=""></a>
                                 <div class="kebab-drops posabs">
                                     <a href="#">Edit</a>
                                     <a href="#">Approve</a>
@@ -293,7 +296,7 @@
                         <div class="row-cells">Ambedkar Nagar New Delhi</div>
                         <div class="row-cells" style="width:1%">
                             <div class="kebab-act posrel">
-                                <a href="#"><img src="img/kebabmenu.svg" alt=""></a>
+                                <a href="#" class="toggle-btn"><img src="img/kebabmenu.svg" alt=""></a>
                                 <div class="kebab-drops posabs">
                                     <a href="#">Edit</a>
                                     <a href="#">Approve</a>
@@ -311,7 +314,7 @@
                         <div class="row-cells">Ambedkar Nagar New Delhi</div>
                         <div class="row-cells" style="width:1%">
                             <div class="kebab-act posrel">
-                                <a href="#"><img src="img/kebabmenu.svg" alt=""></a>
+                                <a href="#" class="toggle-btn"><img src="img/kebabmenu.svg" alt=""></a>
                                 <div class="kebab-drops posabs">
                                     <a href="#">Edit</a>
                                     <a href="#">Approve</a>
@@ -354,10 +357,42 @@
 <script src="scripts/listingpopup.js"></script>
 <!-- Add this before the closing </body> tag of your HTML -->
 <script>
-   $('.dev_wrap').on('click', '#showFilter', function () {
+    $('.dev_wrap').on('click', '#showFilter', function() {
         var curr = $(this);
-        $('#popup').load('ajax/showDepartmentFilter.php', function () {
+        $('#popup').load('ajax/showDepartmentFilter.php', function() {
             $('#popup').show();
+        });
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var toggleBtns = document.querySelectorAll('.toggle-btn');
+
+        toggleBtns.forEach(function(toggleBtn) {
+            toggleBtn.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default anchor behavior
+                var kebabMenu = this.parentElement.querySelector('.kebab-drops');
+                
+                // Close all other open kebab menus
+                var allKebabMenus = document.querySelectorAll('.kebab-drops.show');
+                allKebabMenus.forEach(function(menu) {
+                    if (menu !== kebabMenu) {
+                        menu.classList.remove('show');
+                    }
+                });
+
+                kebabMenu.classList.toggle('show');
+            });
+        });
+
+        // Close kebab menus when clicking outside of them
+        window.addEventListener('click', function(event) {
+            if (!event.target.closest('.kebab-act')) {
+                var allKebabMenus = document.querySelectorAll('.kebab-drops.show');
+                allKebabMenus.forEach(function(menu) {
+                    menu.classList.remove('show');
+                });
+            }
         });
     });
 </script>
